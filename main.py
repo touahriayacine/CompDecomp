@@ -1,16 +1,16 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication
 import sys
-import main
+import main_widget_ui as ui
 
-class ExampleApp(QtWidgets.QMainWindow, main.Ui_MainWindow):
+class MyApp(QtWidgets.QMainWindow, ui.Ui_MainWindow):
     def __init__(self, parent=None):
-        super(ExampleApp, self).__init__(parent)
+        super(MyApp, self).__init__(parent)
         self.setupUi(self)
 
 def main():
     app = QApplication(sys.argv)
-    form = ExampleApp()
+    form = MyApp()
     form.show()
     app.exec_()
 
