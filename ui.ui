@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>646</width>
-    <height>492</height>
+    <width>645</width>
+    <height>494</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Run Length Encoding</string>
@@ -82,7 +88,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="assets/images.qrc">:/assets/b1.jpg</pixmap>
+     <pixmap>assets/b1.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -105,7 +111,7 @@
      <rect>
       <x>0</x>
       <y>20</y>
-      <width>641</width>
+      <width>651</width>
       <height>61</height>
      </rect>
     </property>
@@ -128,8 +134,8 @@
    <widget class="QPushButton" name="selectFile">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>350</y>
+      <x>220</x>
+      <y>360</y>
       <width>194</width>
       <height>39</height>
      </rect>

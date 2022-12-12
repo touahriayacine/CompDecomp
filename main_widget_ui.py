@@ -1,6 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -72,13 +71,6 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
-        self.selectFile.clicked.connect(self.getfilepath)
-    def getfilepath(self):
-        file_name = QtWidgets.QFileDialog.getOpenFileName(self, "selectionner un fichier" , "" , "fichier text (*.txt)")
-        if file_name:
-            path = file_name[0]
-            print(path)
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Run Length Encoding"))
