@@ -18,12 +18,12 @@ class MyApp(QtWidgets.QMainWindow, ui.Ui_MainWindow):
             self.window = QtWidgets.QMainWindow()
             self.ui = chose.Ui_choseOperation()
             self.ui.setupUi(self.window)
-            self.ui.comp.clicked.connect(lambda: self.do_operation("Compression" , "comp_prog" , "cmp"))
-            self.ui.decomp.clicked.connect(lambda: self.do_operation("Decompression" , "decomp_prog" , "dcmp"))
+            self.ui.comp.clicked.connect(lambda: self.do_operation("Compression" , "comp_prog" , "cmp" , "prog_cmp.txt"))
+            self.ui.decomp.clicked.connect(lambda: self.do_operation("Decompression" , "decomp_prog" , "dcmp" , "prog_dcmp.txt"))
             self.close()
             self.window.show()
 
-    def do_operation(self , t , prog_name , extension):
+    def do_operation(self , t , prog_name , extension , file_name):
         file_input, file_output , title = self.open_window()
         title.setText(t)
         self.read_file(self.path , file_input)
@@ -32,7 +32,7 @@ class MyApp(QtWidgets.QMainWindow, ui.Ui_MainWindow):
         name= tmp[-1]
         new_name = name.split(".")[0] + f"_{extension}.txt"
         os.system(f"./{prog_name} {self.path}")
-        os.system(f"mv prog_cmp.txt {path}/{new_name}")
+        os.system(f"mv {file_name} {path}/{new_name}")
         self.read_file(f"{path}/{new_name}" , file_output)
 
     def open_window(self):
