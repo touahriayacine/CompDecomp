@@ -7,7 +7,6 @@ import chose
 import results
 import os
 
-
 class MyApp(QtWidgets.QMainWindow, ui.Ui_MainWindow):
     def __init__(self, parent=None):
         super(MyApp, self).__init__(parent)
