@@ -1,4 +1,5 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtGui, QtWidgets
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication
 import sys
 import main_widget_ui as ui
@@ -11,6 +12,7 @@ class MyApp(QtWidgets.QMainWindow, ui.Ui_MainWindow):
     def __init__(self, parent=None):
         super(MyApp, self).__init__(parent)
         self.setWindowIcon(QtGui.QIcon("./assets/arrows.png"))
+        self.setWindowFlags(Qt.WindowCloseButtonHint | Qt.WindowMinimizeButtonHint)
         self.setupUi(self)
         self.selectFile.clicked.connect(self.getfilepath)
         self.cwd = os.getcwd()
@@ -22,6 +24,7 @@ class MyApp(QtWidgets.QMainWindow, ui.Ui_MainWindow):
             self.path = file_name[0]
             self.window = QtWidgets.QMainWindow()
             self.window.setWindowIcon(QtGui.QIcon("./assets/arrows.png"))
+            self.window.setWindowFlags(Qt.WindowCloseButtonHint | Qt.WindowMinimizeButtonHint)
             self.ui = chose.Ui_choseOperation()
             self.ui.setupUi(self.window)
             self.ui.comp.clicked.connect(lambda: self.do_operation(
@@ -57,6 +60,7 @@ class MyApp(QtWidgets.QMainWindow, ui.Ui_MainWindow):
     def open_window(self):
         self.window = QtWidgets.QMainWindow()
         self.window.setWindowIcon(QtGui.QIcon("./assets/arrows.png"))
+        self.window.setWindowFlags(Qt.WindowCloseButtonHint | Qt.WindowMinimizeButtonHint)
         self.interface = results.Ui_resultsWin()
         self.interface.setupUi(self.window)
         self.close()
