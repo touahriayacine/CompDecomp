@@ -224,7 +224,7 @@
     <property name="styleSheet">
      <string notr="true">#frame{
 
-background-color: rgb(200 , 200 , 200 , .5);
+background-color: rgba(200 , 200 , 200 , .5);
 }</string>
     </property>
     <property name="frameShape">
@@ -279,7 +279,7 @@ background-color: rgb(200 , 200 , 200 , .5);
     <property name="styleSheet">
      <string notr="true">#frame_2{
 
-background-color: rgb(200 , 200 , 200 , .5);
+background-color: rgba(200 , 200 , 200 , .5);
 }</string>
     </property>
     <property name="frameShape">
