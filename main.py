@@ -62,6 +62,7 @@ class MyApp(QtWidgets.QMainWindow, ui.Ui_MainWindow):
         self.window.setWindowFlags(Qt.WindowCloseButtonHint | Qt.WindowMinimizeButtonHint)
         self.interface = results.Ui_resultsWin()
         self.interface.setupUi(self.window)
+        self.interface.pushButton.clicked.connect(lambda: self.go_home(self.window))
         self.close()
         self.window.show()
         return self.interface.file_input, self.interface.file_output, self.interface.title
@@ -70,6 +71,10 @@ class MyApp(QtWidgets.QMainWindow, ui.Ui_MainWindow):
         with open(path, "r") as f:
             content = f.read()
             label.setText(content)
+
+    def go_home(self , window):
+        window.close()
+        self.show()
 
 
 def main():
