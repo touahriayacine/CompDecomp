@@ -37,7 +37,7 @@ class Ui_resultsWin(object):
         self.frame.setPalette(palette)
         self.frame.setStyleSheet("#frame{\n"
 "\n"
-"background-color: rgb(200 , 200 , 200 , .5);\n"
+"background-color: rgba(200 , 200 , 200 , .5);\n"
 "}")
         self.frame.setObjectName("frame")
         self.file_input = QtWidgets.QLabel(self.frame)
@@ -46,6 +46,7 @@ class Ui_resultsWin(object):
         self.file_input.setMaximumSize(QtCore.QSize(16777215, 491))
         font = QtGui.QFont()
         font.setFamily("Poppins")
+        font.setPointSize(13)
         self.file_input.setFont(font)
         self.file_input.setText("")
         self.file_input.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
@@ -54,7 +55,7 @@ class Ui_resultsWin(object):
         self.frame_2.setGeometry(QtCore.QRect(410, 80, 381, 511))
         self.frame_2.setStyleSheet("#frame_2{\n"
 "\n"
-"background-color: rgb(200 , 200 , 200 , .5);\n"
+"background-color: rgba(200 , 200 , 200 , .5);\n"
 "}")
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -65,6 +66,7 @@ class Ui_resultsWin(object):
         self.file_output.setMaximumSize(QtCore.QSize(331, 491))
         font = QtGui.QFont()
         font.setFamily("Poppins")
+        font.setPointSize(13)
         self.file_output.setFont(font)
         self.file_output.setText("")
         self.file_output.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)

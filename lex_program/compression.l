@@ -60,7 +60,6 @@ X+ fprintf(yyout,"X%d" , yyleng);
 Y+ fprintf(yyout,"Y%d" , yyleng);
 Z+ fprintf(yyout,"Z%d" , yyleng);
 \n fprintf(yyout,"\n");
-# {fprintf(yyout, "#"); yywrap();}
 . {REJECT;}
 %%
 

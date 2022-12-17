@@ -11,7 +11,6 @@
 [0-9]+ {int nb_it = atoi(&yytext[1]); for(int i=0;i<nb_it;i++) fprintf(yyout,"%c",yytext[0]);}
 " " {fprintf(yyout," ");}
 \n {fprintf(yyout,"\n");}
-# ;
 
 %%
 
